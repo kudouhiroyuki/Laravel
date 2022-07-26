@@ -25,6 +25,6 @@ rm -f bootstrap/cache/config.php
 - Route一覧<br>
 php artisan route:list
 
-- パッケージインストール
+- パッケージインストール<br>
 npm install<br>
 composer install
