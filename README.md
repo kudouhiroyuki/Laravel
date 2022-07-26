@@ -7,6 +7,10 @@ http://localhost:8000/admin/
 - Laravel-Admin
 
 ## コマンド
+- 起動<br>
+php artisan serve
+npm run dev
+
 - キャッシュクリア<br>
 php artisan cache:clear &&<br>
 php artisan config:clear &&<br>
@@ -20,3 +24,7 @@ rm -f bootstrap/cache/config.php
 
 - Route一覧<br>
 php artisan route:list
+
+- パッケージインストール
+npm install<br>
+composer install
