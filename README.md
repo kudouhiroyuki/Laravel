@@ -8,7 +8,7 @@ http://localhost:8000/admin/
 
 ## コマンド
 - 起動<br>
-php artisan serve
+php artisan serve<br>
 npm run dev
 
 - キャッシュクリア<br>
