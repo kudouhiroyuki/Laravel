@@ -1,6 +1,5 @@
 ## サイト画面
 http://localhost:8000/
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
 
 ## 管理画面
 http://localhost:8000/admin/
@@ -10,6 +9,9 @@ http://localhost:8000/admin/
 - パッケージインストール<br>
 npm install<br>
 composer install
+
+- .env修正<br>
+管理者に設定ファイルを貰う（コミットしないように）
 
 - 起動<br>
 php artisan serve<br>
