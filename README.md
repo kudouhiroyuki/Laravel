@@ -8,12 +8,12 @@ http://localhost:8000/admin/
 
 ## コマンド
 ■キャッシュクリア
-  php artisan cache:clear &&
-  php artisan config:clear &&
-  php artisan config:cache &&
-  php artisan route:clear &&
-  php artisan view:clear &&
-  php artisan clear-compiled &&
-  php artisan optimize &&
-  composer dump-autoload &&
-  rm -f bootstrap/cache/config.php
+php artisan cache:clear &&<br>
+php artisan config:clear &&<br>
+php artisan config:cache &&<br>
+php artisan route:clear &&<br>
+php artisan view:clear &&<br>
+php artisan clear-compiled &&<br>
+php artisan optimize &&<br>
+composer dump-autoload &&<br>
+rm -f bootstrap/cache/config.php
