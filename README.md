@@ -7,7 +7,7 @@ http://localhost:8000/admin/
 - Laravel-Admin
 
 ## コマンド
-■キャッシュクリア
+- キャッシュクリア<br>
 php artisan cache:clear &&<br>
 php artisan config:clear &&<br>
 php artisan config:cache &&<br>
@@ -17,3 +17,6 @@ php artisan clear-compiled &&<br>
 php artisan optimize &&<br>
 composer dump-autoload &&<br>
 rm -f bootstrap/cache/config.php
+
+- Route一覧<br>
+php artisan route:list
