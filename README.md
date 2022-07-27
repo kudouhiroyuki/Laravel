@@ -5,7 +5,7 @@ http://localhost:8000/
 http://localhost:8000/admin/
 - Laravel-Admin
 
-## コマンド
+## 環境構築
 - パッケージインストール<br>
 npm install<br>
 composer install
@@ -17,6 +17,7 @@ composer install
 php artisan serve<br>
 npm run dev
 
+## コマンド<br>
 - キャッシュクリア<br>
 php artisan cache:clear &&<br>
 php artisan config:clear &&<br>
@@ -31,5 +32,5 @@ rm -f bootstrap/cache/config.php
 - Route一覧<br>
 php artisan route:list
 
-## sql<br>
+## SQL<br>
 TRUNCATE laravel.contactChats;（全レコード削除）<br>
