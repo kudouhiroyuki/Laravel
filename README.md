@@ -17,7 +17,10 @@ composer install
 php artisan serve<br>
 npm run dev
 
-## コマンド<br>
+## SQL<br>
+TRUNCATE laravel.contactChats;（全レコード削除）<br>
+
+## Laravel<br>
 - キャッシュクリア<br>
 php artisan cache:clear &&<br>
 php artisan config:clear &&<br>
@@ -30,14 +33,13 @@ composer dump-autoload &&<br>
 rm -f bootstrap/cache/config.php
 
 - Route一覧<br>
-php artisan route:list
+php artisan route:lis
 
-## SQL<br>
-TRUNCATE laravel.contactChats;（全レコード削除）<br>
-
+ ```
 // ログイン中のユーザー情報
 {{  Auth::user() }}
 // ログイン中ユーザーID
 {{ Auth::id() }}
 // ログインしているか判定
 {{ Auth::check() }}
+ ```
