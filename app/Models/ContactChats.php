@@ -10,6 +10,8 @@ class ContactChats extends Model {
   // データの挿入を許可する
   protected $fillable = [
     'id',
+    'username',
     'message',
+    
   ];
 }

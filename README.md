@@ -22,7 +22,7 @@ TRUNCATE laravel.contactChats;（全レコード削除）<br>
 
 ## Laravel<br>
 
-- 全テーブル削除+マイグレーション実行<br>
+- 全テーブル削除 + マイグレーション実行<br>
 php artisan migrate:fresh
 
 - キャッシュクリア<br>
