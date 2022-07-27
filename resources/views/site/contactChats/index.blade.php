@@ -72,35 +72,17 @@
               <button type="submit" class="js-chat-submit btn btn-primary">投稿</button>
             </div>
           </div>
-          <div class="line-bc">
+          <div class="js-chat-row line-bc">
             @foreach($contact_chats as $value)
-              @if ($value->username === Auth::user()['username'])
-                <div>
-                  <div style="font-size: 12px; color: #fff">name</div>
-                  <div class="clearfix">
-                    <div class="balloon1 float-left">{{ $value->message }}</div>
-                  </div>
-                  <div className="clearfix">
-                    <time style="font-size: 12px">{{ $value->created_at }}</time>
-                  </div>
+              <div class="mb-3">
+                <div style="font-size: 12px; color: #fff">{{ $value->name }}</div>
+                <div class="clearfix">
+                  <div class="balloon1 float-left">{{ $value->message }}</div>
                 </div>
-              @else
-                <div>
-                  <div class="clearfix">
-                    <div class="float-right">
-                      <div style="font-size: 12px; color: #fff">{{ $value->name }}</div>
-                    </div>
-                  </div>
-                  <div class="clearfix">
-                    <div class="balloon2 float-right">{{ $value->message }}</div>
-                  </div>
-                  <div class="clearfix">
-                    <div class="float-right">
-                      <time style="font-size: 12px">{{ $value->created_at }}</time>
-                    </div>
-                  </div>
+                <div className="clearfix">
+                  <time style="font-size: 12px">{{ $value->created_at }}</time>
                 </div>
-              @endif
+              </div>
             @endforeach
           </div>
         </article>

@@ -10947,10 +10947,7 @@ $(document).ready(function () {
     return false;
   });
   window.Echo.channel("chat-channel").listen("MessageCreated", function (e) {
-    console.log("Chat MessageCreated");
-    console.log(e);
-    $(".js-chat .js-chat-board").prepend("<div><label>タイトル：</label>" + e.message.message + "</div>");
-    $(".js-chat .js-chat-board").prepend("<div><label>内容：</label>" + e.message.message + "</div>");
+    $(".js-chat-row").append("\n      <div class=\"mb-3\">\n        <div style=\"font-size: 12px; color: #fff\">".concat(e.message.name, "</div>\n        <div class=\"clearfix\">\n          <div class=\"balloon1 float-left\">").concat(e.message.message, "</div>\n        </div>\n        <div className=\"clearfix\">\n          <time style=\"font-size: 12px\">").concat(e.message.created_at, "</time>\n        </div>\n      </div>\n    "));
   });
 });
 })();

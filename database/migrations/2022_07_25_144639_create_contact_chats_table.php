@@ -8,7 +8,7 @@ class CreateContactChatsTable extends Migration {
   public function up() {
     Schema::create('contactChats', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('username', 190)->unique();
+      $table->string('username');
       $table->string('name');
       $table->text('message');
       $table->timestamp('updated_at')->useCurrent()->nullable();

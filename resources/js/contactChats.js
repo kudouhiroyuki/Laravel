@@ -18,13 +18,16 @@ $(document).ready(function() {
     return false;
   });
   window.Echo.channel("chat-channel").listen("MessageCreated", e => {
-    console.log("Chat MessageCreated")
-    console.log(e)
-    $(".js-chat .js-chat-board").prepend(
-    "<div><label>タイトル：</label>" + e.message.message + "</div>"
-    );
-    $(".js-chat .js-chat-board").prepend(
-    "<div><label>内容：</label>" + e.message.message + "</div>"
-    );
+    $(".js-chat-row").append(`
+      <div class="mb-3">
+        <div style="font-size: 12px; color: #fff">${ e.message.name }</div>
+        <div class="clearfix">
+          <div class="balloon1 float-left">${ e.message.message }</div>
+        </div>
+        <div className="clearfix">
+          <time style="font-size: 12px">${ e.message.created_at }</time>
+        </div>
+      </div>
+    `);
   });
 });
