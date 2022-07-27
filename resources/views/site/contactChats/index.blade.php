@@ -64,14 +64,14 @@
     <div class="row">
       <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="form-group">
-          <textarea name="message" style="max-width: 400px; margin: 0 auto" class="form-control"></textarea>
+          <textarea name="message" style="max-width: 400px; margin: 0 auto 30px" class="form-control"></textarea>
           <div class="text-center">
             <button type="submit" class="js-chat-submit btn btn-primary">投稿</button>
           </div>
         </div>
         <div class="line-bc">
           @foreach($contact_chats as $value)
-            @if ($value->id === 1)
+            @if ($value->username === Auth::user()['username'])
               <div>
                 <div style="font-size: 12px; color: #fff">name</div>
                 <div class="clearfix">

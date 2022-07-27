@@ -21,6 +21,10 @@ npm run dev
 TRUNCATE laravel.contactChats;（全レコード削除）<br>
 
 ## Laravel<br>
+
+- 全テーブル削除+マイグレーション実行<br>
+php artisan migrate:fresh
+
 - キャッシュクリア<br>
 php artisan cache:clear &&<br>
 php artisan config:clear &&<br>
