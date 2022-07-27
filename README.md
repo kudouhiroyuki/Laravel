@@ -3,7 +3,7 @@ http://localhost:8000/
 
 ## 管理画面
 http://localhost:8000/admin/
-- Laravel-Admin
+- [Laravel-Admin](https://laravel-admin.org/docs/zh/1.x)
 
 ## 環境構築
 - パッケージインストール<br>
@@ -34,3 +34,10 @@ php artisan route:list
 
 ## SQL<br>
 TRUNCATE laravel.contactChats;（全レコード削除）<br>
+
+// ログイン中のユーザー情報
+{{  Auth::user() }}
+// ログイン中ユーザーID
+{{ Auth::id() }}
+// ログインしているか判定
+{{ Auth::check() }}
