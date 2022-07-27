@@ -30,3 +30,6 @@ rm -f bootstrap/cache/config.php
 
 - Route一覧<br>
 php artisan route:list
+
+## sql<br>
+TRUNCATE laravel.contactChats;（全レコード削除）<br>
