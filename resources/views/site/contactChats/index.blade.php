@@ -61,46 +61,50 @@
     <p class="text-center">ログインが必要です
     </p>
   @else
-    <div class="row">
-      <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="form-group">
-          <textarea name="message" style="max-width: 400px; margin: 0 auto 30px" class="form-control"></textarea>
-          <div class="text-center">
-            <button type="submit" class="js-chat-submit btn btn-primary">投稿</button>
+    <div class="container">
+      <div class="row justify-content-center">
+        <article class="col-md-8">
+          <div class="form-group mb-5">
+            <input type="hidden" name="username" value="{{ Auth::user()['username'] }}" class="js-chat-username">
+            <input type="hidden" name="name" value="{{ Auth::user()['name'] }}" class="js-chat-name">
+            <textarea name="message" class="js-chat-message form-control mb-3"></textarea>
+            <div class="text-center">
+              <button type="submit" class="js-chat-submit btn btn-primary">投稿</button>
+            </div>
           </div>
-        </div>
-        <div class="line-bc">
-          @foreach($contact_chats as $value)
-            @if ($value->username === Auth::user()['username'])
-              <div>
-                <div style="font-size: 12px; color: #fff">name</div>
-                <div class="clearfix">
-                  <div class="balloon1 float-left">{{ $value->message }}</div>
-                </div>
-                <div className="clearfix">
-                  <time style="font-size: 12px">{{ $value->created_at }}</time>
-                </div>
-              </div>
-            @else
-              <div>
-                <div class="clearfix">
-                  <div class="float-right">
-                    <div style="font-size: 12px; color: #fff">{{ $value->name }}</div>
+          <div class="line-bc">
+            @foreach($contact_chats as $value)
+              @if ($value->username === Auth::user()['username'])
+                <div>
+                  <div style="font-size: 12px; color: #fff">name</div>
+                  <div class="clearfix">
+                    <div class="balloon1 float-left">{{ $value->message }}</div>
                   </div>
-                </div>
-                <div class="clearfix">
-                  <div class="balloon2 float-right">{{ $value->message }}</div>
-                </div>
-                <div class="clearfix">
-                  <div class="float-right">
+                  <div className="clearfix">
                     <time style="font-size: 12px">{{ $value->created_at }}</time>
                   </div>
                 </div>
-              </div>
-            @endif
-          @endforeach
-        </div>
-      </article>
+              @else
+                <div>
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <div style="font-size: 12px; color: #fff">{{ $value->name }}</div>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="balloon2 float-right">{{ $value->message }}</div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <time style="font-size: 12px">{{ $value->created_at }}</time>
+                    </div>
+                  </div>
+                </div>
+              @endif
+            @endforeach
+          </div>
+        </article>
+      </div>
     </div>
   @endguest
 @endsection

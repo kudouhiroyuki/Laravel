@@ -14,8 +14,8 @@ composer install
 管理者に設定ファイルを貰う（コミットしないように）
 
 - 起動<br>
+npm run dev（フロントビルド）<br>
 php artisan serve<br>
-npm run dev
 
 ## SQL<br>
 TRUNCATE laravel.contactChats;（全レコード削除）<br>

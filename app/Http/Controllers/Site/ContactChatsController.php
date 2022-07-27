@@ -17,6 +17,8 @@ class ContactChatsController extends Controller {
   }
   public function store(Request $request) {
     $message = contactChats::create([
+      'username' => $request->input('username'),
+      'name' => $request->input('name'),
       'message' => $request->input('message'),
     ]);
     event(new MessageCreated($message));

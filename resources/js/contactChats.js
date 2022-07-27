@@ -9,7 +9,9 @@ $(document).ready(function() {
     $.ajax({
     url: url,
     data: {
-      message: "テスト",
+      username: $(".js-chat-username").val(),
+      name: $(".js-chat-name").val(),
+      message: $(".js-chat-message").val(),
     },
     method: "POST"
     });

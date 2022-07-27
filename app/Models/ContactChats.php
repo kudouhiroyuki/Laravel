@@ -11,6 +11,7 @@ class ContactChats extends Model {
   protected $fillable = [
     'id',
     'username',
+    'name',
     'message',
     
   ];
